@@ -6,7 +6,7 @@
 
 #define ROOT "."
 
-const char *PATTERNS[] = {".pyc", "__pycache__"};
+const char *PATTERNS[] = {"_"};
 
 #define BOLD "\033[1m"
 #define ENDC "\033[0m"
@@ -85,7 +85,7 @@ void clean(Cleaner *cleaner) {
 }
 
 int main() {
-    const char *patterns[] = {".pyc", "__pycache__"};
+    const char *patterns[] = {".p__"};
     Cleaner cleaner = {.root = ROOT, .patterns = patterns, .patterns_size = 2, .use_torch = 0};
     clean(&cleaner);
     return 0;
